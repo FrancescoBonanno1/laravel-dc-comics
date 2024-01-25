@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use app\Models\Comic;
+use App\Models\Comic;
 
 class ComicsSeeder extends Seeder
 {
@@ -13,16 +13,16 @@ class ComicsSeeder extends Seeder
      */
     public function run(): void
     {
-        $comics_array=config("comic");
+        $comics_array=config("comics");
         foreach($comics_array as $comic_item){
             $new_comic= new comic();
-            $new_comic->titolo = $comic_item["title"];
-            $new_comic->descrizione = $comic_item["description"];
-            $new_comic->img = $comic_item["thumb"];
-            $new_comic->prezzo = $comic_item["price"];
-            $new_comic->serie = $comic_item["series"];
-            $new_comic->data_vendita = $comic_item["sale_date"];
-            $new_comic->tipo = $comic_item["type"];
+            $new_comic->title = $comic_item["title"];
+            $new_comic->description = $comic_item["description"];
+            $new_comic->thumb = $comic_item["thumb"];
+            $new_comic->price = $comic_item["price"];
+            $new_comic->series = $comic_item["series"];
+            $new_comic->sale_date = $comic_item["sale_date"];
+            $new_comic->type = $comic_item["type"];
             $new_comic->save();
 
         }
