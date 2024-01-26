@@ -11,3 +11,25 @@ body {
     padding: 0;
     margin: 0;
 }
+#belt{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.expo_img{
+    width: 70%;
+    height: 20%;
+}
+#card_comics h3{
+    font-size: 0.9em;
+    color: crimson;
+    margin-top: 3%;
+}
+#flexbox{
+    width: 70%;
+}
+#card_comics{
+    width: 13%;
+    height: 20%;
+}
