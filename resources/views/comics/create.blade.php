@@ -4,6 +4,7 @@
 <div id="form_container">
     <h1>Inserisci IL tuo fumetto!</h1>
     <form action="{{route ('comics.store')}}" method="POST">
+       @csrf
         <div class="mb-3">
           <label for="title" class="form-label">title</label>
           <input type="text" class="form-control" name="title" id="title" aria-describedby="emailHelp">
@@ -19,6 +20,10 @@
             <input type="text" class="form-control" name="thumb" id="thumb" aria-describedby="emailHelp">
             <div id="emailHelp" class="form-text">Inserisci una foto</div>
           </div>
+          <div class="mb-3">
+            <label for="price" class="form-label">title</label>
+            <input type="text" class="form-control" name="price" id="price" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">Inserisci Prezzo</div>
         <div class="mb-3">
             <label for="type" class="form-label">type</label>
             <input type="text" class="form-control" name="type" id="type" aria-describedby="emailHelp">
